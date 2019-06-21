@@ -1,4 +1,4 @@
-JS
+JS test pascal
 
 function getCookie(cname) {
     var name = cname + "=";
