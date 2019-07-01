@@ -1,0 +1,37 @@
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function setCookie(cname, cvalue) {
+	document.cookie = cname + "=" + cvalue;
+}
+
+var url = document.URL;
+if (url.indexOf("men") != -1) {
+
+	var events = getCookie("counter");
+        console.log("events = " + events);
+
+	if (!events) {
+		events = 1; // the value for the new cookie
+		b["cookie_modal"] = events;
+	        console.log("cookie_modal = " +b["cookie_modal"]);
+	} else {
+		// increment the counter
+		events = parseInt(events) + 1;
+		b["cookie_modal"] = events;
+	        console.log("cookie_modal = " +b["cookie_modal"]);
+	        console.log(typeof b["cookie_modal"])
+		
+
+	}
+	// set the new cookie
+	setCookie("counter", events);
+}
