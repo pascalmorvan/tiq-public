@@ -1,4 +1,4 @@
-//comment pascal 
+//comment pascal la poste
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
